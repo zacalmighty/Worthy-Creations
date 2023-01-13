@@ -31,11 +31,8 @@ section {
   height: 2.5rem;
   border-radius: 50%;
   border: 2px solid #fff;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
   align-items: center;
-  -ms-flex-pack: center;
   justify-content: center;
   color: #fff;
   font-size: 0.8rem;
@@ -136,7 +133,7 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 2;
+  /* z-index: 2; */
 }
 
 .overlay + .content {
@@ -169,11 +166,8 @@ section {
 .social-link {
   width: 30px;
   height: 30px;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
   align-items: center;
-  -ms-flex-pack: center;
   justify-content: center;
   border-radius: 50%;
   color: #fff;
