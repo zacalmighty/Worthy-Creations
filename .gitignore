@@ -1,0 +1,6 @@
+.DS_Store
+.netlify/
+.env
+.claude/settings.local.json
+.claude/session.lock
+STATUS.md
