@@ -1,4 +1,4 @@
-# Netlify settings for worthycreation(s).com. Plain static site: no build step.
+# Netlify settings for the Worthy Creations site. Plain static site: no build step.
 [build]
   publish = "."
   command = ""
@@ -10,13 +10,10 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Frame-Options = "SAMEORIGIN"
 
-# Images, CSS, JS and vendor files rarely change: let browsers cache them for a week.
+# Images rarely change: let browsers cache them for a week. CSS/JS keep Netlify's default
+# (revalidate every visit) because their file names don't change between deploys.
 [[headers]]
   for = "/img/*"
-  [headers.values]
-    Cache-Control = "public, max-age=604800"
-[[headers]]
-  for = "/vendor/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
 
@@ -33,6 +30,11 @@
   force = true
 [[redirects]]
   from = "/.gitignore"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/img/source/*"
   to = "/404"
   status = 404
   force = true

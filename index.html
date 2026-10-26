@@ -1,405 +1,308 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Worthy Creations</title>
-    <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="all,follow" />
-    <!-- Bootstrap CSS v4.3.1 -->
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
-    <!-- Google fonts-->
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,700"
-      rel="stylesheet"
+    <title>Taxes &amp; immigration help in Trenton, NJ | Worthy Creations</title>
+    <meta
+      name="description"
+      content="Neighborhood office on South Olden Ave in Trenton, NJ: tax preparation, bookkeeping, bill pay, money transfer, immigration paperwork, translation and ESL."
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700"
-      rel="stylesheet"
+    <link rel="canonical" href="https://worthy-creations.netlify.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://worthy-creations.netlify.app/" />
+    <meta property="og:title" content="Worthy Creations, Trenton NJ" />
+    <meta
+      property="og:description"
+      content="Taxes, immigration paperwork, translation and everyday paperwork help on South Olden Ave. With us, you're worthy."
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Parisienne&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Lightbox-->
-    <link rel="stylesheet" href="vendor/lightbox2/css/lightbox.min.css" />
-    <!-- theme stylesheet-->
-    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet" />
-    <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="css/custom.css" />
-    <!-- Leaflet CSS - For the map-->
+    <meta property="og:image" content="https://worthy-creations.netlify.app/img/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#1d2b84" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="img/favicon-32.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css"
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap"
     />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <!-- Favicon-->
-    <link rel="shortcut icon" href="favicon.ico" />
-    <!-- Tweaks for older IEs-->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script
-    ><![endif]-->
+    <link rel="stylesheet" href="css/site.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Worthy Creations",
+        "slogan": "A Legacy Affair",
+        "url": "https://worthy-creations.netlify.app/",
+        "image": "https://worthy-creations.netlify.app/img/og-image.jpg",
+        "logo": "https://worthy-creations.netlify.app/img/logo-640.png",
+        "email": "worthycreations.alegacyaffair@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "111 South Olden Ave",
+          "addressLocality": "Trenton",
+          "addressRegion": "NJ",
+          "postalCode": "08609",
+          "addressCountry": "US"
+        },
+        "areaServed": { "@type": "City", "name": "Trenton, NJ" },
+        "knowsAbout": [
+          "Tax preparation",
+          "Bookkeeping",
+          "Bill pay",
+          "Money transfer",
+          "Immigration services",
+          "Document proofing",
+          "Translation",
+          "English as a second language"
+        ]
+      }
+    </script>
   </head>
 
   <body>
-    <!-- Hero Section-->
-    <section
-      id="intro"
-      style="
-        background: linear-gradient(135deg, #5091da 0%, #1f3354 100%);
-      "
-      class="hero bg-cover"
-    >
-      <div class="overlay"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-      <div class="content h-100 align-items-center d-flex position-relative">
-        <div class="container text-center text-white h-50">
-          <img
-            width="600"
-            height="400"
-            src="img/logo.png"
-            alt=""
-            class="img-fluid"
-          />
-        </div>
+    <!-- Tax-season notice. Shows from Jan 1 to Apr 15 (js/site.js); add ?tax to the URL to
+         preview it any time. Change the dates in js/site.js, or delete this block. -->
+    <aside class="tax-notice" id="tax-notice" aria-label="Tax season" hidden>
+      <div class="wrap tax-notice__inner">
+        <p>
+          <strong>Tax season is here.</strong> Get the return you deserve with Worthy Creations
+          Tax Services.
+        </p>
+        <a class="tax-notice__link" href="#contact" data-topic="Taxes">Book a tax appointment</a>
+        <button type="button" class="tax-notice__close" aria-label="Hide the tax season notice">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+        </button>
       </div>
-      <a href="#about" class="scroll-btn link-scroll"
-        ><i class="fas fa-angle-double-down"></i
-      ></a>
-    </section>
-    <!-- Navbar-->
-    <header class="header sticky-top">
-      <nav class="navbar navbar-expand-lg bg-white border-bottom py-0">
-        <div class="container">
-          <a href="#" class="navbar-brand py-1"
-            ><img
-              width="60"
-              height="40"
-              src="img/logo.png"
-              alt=""
-              class="img-fluid"
-          /></a>
-          <button
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            class="navbar-toggler navbar-toggler-right"
-          >
-            <span class="fas fa-bars"></span>
-          </button>
-          <div id="navbarSupportedContent" class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto px-3">
-              <li class="nav-item active">
-                <a href="#intro" class="nav-link text-uppercase link-scroll"
-                  >Home
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#about" class="nav-link text-uppercase link-scroll"
-                  >About</a
-                >
-              </li>
-              <li class="nav-item">
-                <a href="#services" class="nav-link text-uppercase link-scroll"
-                  >Services</a
-                >
-              </li>
-              <li class="nav-item">
-                <a href="#contact" class="nav-link text-uppercase link-scroll"
-                  >Contact</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+    </aside>
+
+    <header class="site-header">
+      <div class="wrap site-header__inner">
+        <a class="brand" href="#top" aria-label="Worthy Creations, back to top">
+          <picture>
+            <source srcset="img/logo-160.webp" type="image/webp" />
+            <img src="img/logo-160.png" width="160" height="127" alt="" />
+          </picture>
+          <span class="brand__name">Worthy Creations</span>
+        </a>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" /></svg>
+          <span>Menu</span>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Main">
+          <a href="#services">Services</a>
+          <a href="#about">About us</a>
+          <a href="#visit">Visit</a>
+          <a class="button button--small" href="#contact">Send us a message</a>
+        </nav>
+      </div>
     </header>
 
-    <!-- TAX-BANNER -->
-    <h4 class="lined text-uppercase text-danger text-center pt-4">
-      Get the return you deserve with WORTHY CREATIONS
-      <u>TAX SERVICES</u>
-    </h4>
-    <!-- <div
-      class="container text-center text-white position-absolute px-0 h-50"
-      style="top: 0; max-width: 100vw; width: 100vw"
-    >
-      <picture>
-        <source
-          media="(min-width: 768px) and (max-width:1023px)"
-          srcset="img/banner-md.jpg"
-        />
-        <source media="(max-width: 767px)" srcset="img/banner-sm.jpg" />
-        <img
-          data-src="img/banner.jpg"
-          srcset="img/banner-lg.jpg"
-          alt="Cold Weather Shop! Stay warm with savings on sweaters, coats, boots & more!"
-          class="w-100 img-fluid lazy"
-        />
-      </picture>
-    </div> -->
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="wrap hero__inner">
+          <div class="hero__text">
+            <h1>Taxes, immigration papers and everyday paperwork, handled with respect</h1>
+            <p class="hero__lede">
+              A neighborhood office on South Olden Avenue in Trenton. Bring your questions and your
+              papers, and we'll guide you through the whole process.
+            </p>
+            <div class="hero__actions">
+              <a class="button button--gold" href="#contact">Send us a message</a>
+              <a
+                class="button button--ghost"
+                href="https://www.google.com/maps/dir/?api=1&amp;destination=111+South+Olden+Ave,+Trenton,+NJ+08609"
+                rel="noopener"
+                >Get directions</a
+              >
+            </div>
+          </div>
+          <div class="seal" aria-hidden="true">
+            <picture>
+              <source srcset="img/logo-640.webp" type="image/webp" />
+              <img src="img/logo-640.png" width="640" height="507" alt="" />
+            </picture>
+          </div>
+        </div>
+      </section>
 
-    <!-- About Section-->
-    <section id="about" class="about">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="">
-            <header class="text-center m-5">
-              <h2 class="lined text-uppercase">About us</h2>
-            </header>
-            <p class="m-5">
-              We are a group of professionals from various backgrounds that
-              decided to provide our services back to the community. Between us
-              we have a combined total of 25 years plus in business and of
-              expertise. Our services vary, they range from immigration
-              services, translation, document proofing, taxes, bookkeeping and
-              many more. We are here to provide the community with much-needed
-              assistance and services. With us you get more than just another
-              work done for you, we guide you through the whole process. When
-              you walk through our doors you will feel welcomed and respected.
-              We treat everyone as VIP’s because with us you’re worthy.
+      <section class="services" id="services" aria-labelledby="services-title">
+        <div class="wrap">
+          <h2 id="services-title">What we can help with</h2>
+          <p class="section-lede">Not sure where your question fits? Send us a message and ask.</p>
+          <div class="services__groups">
+            <section class="service-group" aria-labelledby="money-title">
+              <h3 id="money-title">Taxes &amp; money</h3>
+              <ul class="service-list">
+                <li>
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6M9 16h3" /></svg>
+                  <div><strong>Tax preparation</strong><span>Get the return you deserve.</span></div>
+                </li>
+                <li>
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4zM4 9h16M9 9v11" /></svg>
+                  <div><strong>Bookkeeping</strong></div>
+                </li>
+                <li>
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" /><path d="M14.5 9.5c-.5-1-1.4-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1.1 0-2-.5-2.5-1.5M12 6.5v1.5M12 16v1.5" /></svg>
+                  <div><strong>Financial services</strong></div>
+                </li>
+                <li>
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 5 14h6l-1 8 8-12h-6z" /></svg>
+                  <div><strong>Bill pay</strong><span>Cell phone, PSE&amp;G and more</span></div>
+                </li>
+                <li>
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h13l-3-3M20 16H7l3 3" /></svg>
+                  <div><strong>Money transfer</strong><span>Vigo by Western Union, Ria</span></div>
+                </li>
+              </ul>
+            </section>
+            <section class="service-group" aria-labelledby="papers-title">
+              <h3 id="papers-title">Papers &amp; language</h3>
+              <ul class="service-list">
+                <li>
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1" /><circle cx="12" cy="10" r="3" /><path d="M8.5 16.5h7" /></svg>
+                  <div><strong>Immigration services</strong></div>
+                </li>
+                <li>
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v8M7 3v18h7M14 3v4h4" /><circle cx="17" cy="18" r="2.5" /><path d="m19 20 2 2" /></svg>
+                  <div><strong>Document proofing</strong></div>
+                </li>
+                <li>
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h9M7.5 3v2M5 5c0 4 2.5 7 6 8M10 5c0 4-2.5 7-6 8M13 21l4-9 4 9M14.5 18h5" /></svg>
+                  <div><strong>Translation</strong></div>
+                </li>
+                <li>
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h11a3 3 0 0 1 3 3v8H7a3 3 0 0 0-3 3zM18 16v3H7" /></svg>
+                  <div><strong>ESL</strong><span>English as a second language</span></div>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about" aria-labelledby="about-title">
+        <div class="wrap about__inner">
+          <div class="about__text">
+            <h2 id="about-title">About us</h2>
+            <p>
+              We're a group of professionals from different backgrounds who came together to serve
+              our community. Between us we bring more than 25 years of experience in business.
+            </p>
+            <p>
+              We help with taxes, bookkeeping, immigration paperwork, translation, document proofing
+              and much more, and we guide you through every step instead of just handing back a
+              form. When you walk through our doors, you'll feel welcomed and respected.
             </p>
           </div>
-          <!-- <div class="col-lg-6"><img src="img/template-homepage.png" alt="..." class="img-fluid"></div> -->
+          <figure class="about__quote">
+            <blockquote>
+              <p>We treat everyone as a VIP, because with us, you're worthy.</p>
+            </blockquote>
+            <figcaption>The Worthy Creations team</figcaption>
+          </figure>
         </div>
-      </div>
-    </section>
-    <!-- Services Section-->
-    <section id="services" class="bg-gray">
-      <header class="text-center mb-5">
-        <h2 class="lined text-uppercase">Services</h2>
-      </header>
-      <div
-        class="row text-center justify-content-center col-12 align-content-center mx-0 px-0"
-      >
-        <div class="col-lg-3 bg-white m-2">
-          <div class="p-4">
-            <div class="icon mb-3">
-              <i class="fa-solid fa-file-invoice"></i>
-            </div>
-            <h4 class="text-uppercase font-weight-bold">Bill Pay</h4>
-            <div class="small">(Cell, PSE&G, etc.)</div>
-          </div>
-        </div>
-        <div class="col-lg-3 bg-white m-2">
-          <div class="p-4">
-            <div class="icon mb-3"><i class="fa-solid fa-receipt"></i></div>
-            <h4 class="text-uppercase font-weight-bold">Bookkeeping</h4>
-          </div>
-        </div>
-        <div class="col-lg-3 bg-white m-2">
-          <div class="p-4">
-            <div class="icon mb-3"><i class="fab fa-searchengin"></i></div>
-            <h4 class="text-uppercase font-weight-bold">Document Proofing</h4>
-          </div>
-        </div>
-        <div class="col-lg-3 bg-white m-2">
-          <div class="p-4">
-            <div class="icon mb-3"><i class="far fa-comment-alt"></i></div>
-            <h4 class="text-uppercase font-weight-bold">ESL</h4>
-          </div>
-        </div>
-        <div class="col-lg-3 bg-white m-2">
-          <div class="p-4">
-            <div class="icon mb-3"><i class="far fa-envelope"></i></div>
-            <h4 class="text-uppercase font-weight-bold">Financial Services</h4>
-          </div>
-        </div>
-        <div class="col-lg-3 bg-white m-2">
-          <div class="p-4">
-            <div class="icon mb-3"><i class="fas fa-pencil-ruler"></i></div>
-            <h4 class="text-uppercase font-weight-bold">
-              Immigration Services
-            </h4>
-          </div>
-        </div>
-        <div class="col-lg-3 bg-white m-2">
-          <div class="p-4">
-            <div class="icon mb-3">
-              <i class="fa-solid fa-money-bill-transfer"></i>
-            </div>
-            <h4 class="text-uppercase font-weight-bold">Money Transfer</h4>
-            <div class="small">(Vigo by Western Union, RIa)</div>
-          </div>
-        </div>
-        <div class="col-lg-3 bg-white m-2">
-          <div class="p-4">
-            <div class="icon mb-3"><i class="fa-solid fa-sack-dollar"></i></div>
-            <h4 class="text-uppercase font-weight-bold">Taxes</h4>
-          </div>
-        </div>
-        <div class="col-lg-3 bg-white m-2">
-          <div class="p-4">
-            <div class="icon mb-3"><i class="fa-solid fa-language"></i></div>
-            <h4 class="text-uppercase font-weight-bold">Translation</h4>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Contact Section-->
-    <section id="contact">
-      <div class="container">
-        <header class="text-center mb-5">
-          <h2 class="text-uppercase lined">Contact</h2>
-        </header>
-        <div class="m-5">
-          <p class="text-center">
-            Let get this conversation started! <br />
-            You can reach us at
-            <a href="mailto:worthycreations.alegacyaffair@gmail.com"
-              >worthycreations.alegacyaffair@gmail.com</a
-            >
-            <br />
-            or fill out the form below and we will get back to you in a timely
-            manner.
-          </p>
-        </div>
-        <div class="row">
-          <div class="col-lg-6">
-            <form
-              class="contact-form"
-              action="https://formspree.io/f/mnqowrgd"
-              method="POST"
-            >
-              <div class="row">
-                <div class="form-group col-lg-6">
-                  <label for="firstName">Your firstname *</label>
-                  <input
-                    id="firstName"
-                    type="text"
-                    name="firstname"
-                    placeholder="Enter your firstname"
-                    class="form-control"
-                  />
-                </div>
-                <div class="form-group col-lg-6">
-                  <label for="lastName">Your lastname *</label>
-                  <input
-                    id="lastName"
-                    type="text"
-                    name="lastname"
-                    placeholder="Enter your lastname"
-                    class="form-control"
-                  />
-                </div>
-                <div class="form-group col-lg-6">
-                  <label for="phone">Your phone number *</label>
-                  <input
-                    id="phone"
-                    type="phone"
-                    name="phone"
-                    placeholder="Enter your phone number"
-                    class="form-control"
-                  />
-                </div>
-                <div class="form-group col-lg-6">
-                  <label for="email">Your email *</label>
-                  <input
-                    id="email"
-                    type="email"
-                    name="email"
-                    placeholder="Enter your email"
-                    class="form-control"
-                  />
-                </div>
-                <div class="form-group col-lg-12">
-                  <label for="message">Your message for us *</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    placeholder="Enter your message"
-                    rows="6"
-                    class="form-control"
-                  ></textarea>
-                </div>
-                <div class="form-group col-lg-12">
-                  <button
-                    type="submit"
-                    value="submit"
-                    class="btn btn-outline-primary w-100"
-                  >
-                    Send message
-                  </button>
-                </div>
-              </div>
-            </form>
+      <section class="visit" id="visit" aria-labelledby="visit-title">
+        <div class="wrap visit__inner">
+          <div class="visit__text">
+            <h2 id="visit-title">Visit us</h2>
+            <address>
+              Worthy Creations<br />
+              111 South Olden Ave<br />
+              Trenton, NJ 08609
+            </address>
+            <p>
+              <a
+                href="https://www.google.com/maps/dir/?api=1&amp;destination=111+South+Olden+Ave,+Trenton,+NJ+08609"
+                rel="noopener"
+                >Get directions in Google Maps</a
+              >
+            </p>
+            <p>Message us first to set up a time that works for you.</p>
           </div>
-          <div class="col-lg-6">
-            <div class="mapouter">
-              <div class="gmap_canvas">
-                <iframe
-                  width="600"
-                  height="400"
-                  id="gmap_canvas"
-                  src="https://maps.google.com/maps?q=111%20South%20Olden%20Ave,%20Trenton,%20NJ%2008609&t=&z=17&ie=UTF8&iwloc=&output=embed"
-                  frameborder="0"
-                  scrolling="no"
-                  marginheight="0"
-                  marginwidth="0"
-                ></iframe
-                ><br />
-                <style>
-                  .mapouter {
-                    position: relative;
-                    text-align: right;
-                    height: 500px;
-                    width: 600px;
-                  }</style
-                ><a href="https://www.embedgooglemap.net"></a>
-                <style>
-                  .gmap_canvas {
-                    overflow: hidden;
-                    background: none !important;
-                    height: 500px;
-                    width: 600px;
-                  }
-                </style>
+          <iframe
+            class="visit__map"
+            title="Map: Worthy Creations, 111 South Olden Ave, Trenton, NJ"
+            src="https://www.google.com/maps?q=111+South+Olden+Ave,+Trenton,+NJ+08609&amp;z=16&amp;output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="wrap contact__inner">
+          <div class="contact__intro">
+            <h2 id="contact-title">Send us a message</h2>
+            <p>
+              Tell us what you need help with and how to reach you, and we'll get back to you soon.
+              You can also email us at
+              <a class="email" href="mailto:worthycreations.alegacyaffair@gmail.com"
+                >worthycreations.alegacyaffair@gmail.com</a
+              >.
+            </p>
+          </div>
+          <form class="contact-form" action="https://formspree.io/f/mnqowrgd" method="POST">
+            <input type="hidden" name="_subject" value="New message from the Worthy Creations website" />
+            <div class="field-row">
+              <div class="field">
+                <label for="firstname">First name</label>
+                <input id="firstname" name="firstname" type="text" autocomplete="given-name" required />
+              </div>
+              <div class="field">
+                <label for="lastname">Last name</label>
+                <input id="lastname" name="lastname" type="text" autocomplete="family-name" required />
               </div>
             </div>
-            <!-- <ul class="mb-0 list-inline text-center">
-            <li class="list-inline-item"><a href="#" class="social-link social-link-facebook"><i
-                  class="fab fa-facebook-f"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link social-link-twitter"><i
-                  class="fab fa-twitter"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link social-link-google-plus"><i
-                  class="fab fa-google-plus-g"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link social-link-instagram"><i
-                  class="fab fa-instagram"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link social-link-email"><i
-                  class="fas fa-envelope"></i></a></li>
-          </ul> -->
-          </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required />
+              </div>
+              <div class="field">
+                <label for="email">Email <span class="optional">(optional)</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="topic">What do you need help with?</label>
+              <select id="topic" name="topic">
+                <option>Taxes</option>
+                <option>Bookkeeping</option>
+                <option>Financial services</option>
+                <option>Bill pay</option>
+                <option>Money transfer</option>
+                <option>Immigration services</option>
+                <option>Document proofing</option>
+                <option>Translation</option>
+                <option>ESL</option>
+                <option selected>Something else</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="message">Your message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="button button--ink">Send my message</button>
+          </form>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <footer class="py-4">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 text-center text-lg-left">
-            <p class="mb-0 text-gray">&copy; 2023 Worthy Creations</p>
-          </div>
-        </div>
+    <footer class="site-footer">
+      <div class="wrap site-footer__inner">
+        <p class="site-footer__brand">Worthy Creations <span>A Legacy Affair</span></p>
+        <p>111 South Olden Ave, Trenton, NJ 08609</p>
+        <p>&copy; <span id="year">2026</span> Worthy Creations</p>
       </div>
     </footer>
-    <!-- JavaScript files-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/lightbox2/js/lightbox.min.js"></script>
-    <script src="vendor/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"></script>
-    <script src="js/front.js"></script>
-    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
-    <script
-      src="https://kit.fontawesome.com/4fb1b020c4.js"
-      crossorigin="anonymous"
-    ></script>
+
+    <script src="js/site.js" defer></script>
   </body>
 </html>

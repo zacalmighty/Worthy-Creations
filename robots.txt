@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://worthy-creations.netlify.app/sitemap.xml
